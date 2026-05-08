@@ -1,0 +1,185 @@
+/* Global Admin Dashboard Animations and Effects */
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Admin Dashboard Container */
+body {
+  background: linear-gradient(135deg, #f5f7fa 0%, #f8f9fc 100%);
+}
+
+/* Stat Cards Hover Effect */
+[style*="textAlign: center"][style*="background: white"][style*="borderRadius"] {
+  position: relative;
+  overflow: hidden;
+}
+
+[style*="textAlign: center"][style*="background: white"][style*="borderRadius"]:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Table Row Hover */
+table tbody tr {
+  transition: background-color 0.2s ease !important;
+}
+
+table tbody tr:hover {
+  background-color: #f8f9fa !important;
+}
+
+/* Tab Active State */
+button[style*="borderBottom: 3px solid rgb(66, 133, 244)"] {
+  color: #4285f4 !important;
+  font-weight: 600;
+  border-bottom-color: #4285f4 !important;
+}
+
+/* Button Hover Effects */
+button[style*="backgroundColor: rgba"] {
+  transition: all 0.2s ease !important;
+  position: relative;
+}
+
+button[style*="backgroundColor: rgba"]:hover {
+  transform: scale(1.05) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+button[style*="backgroundColor: rgba"]:active {
+  transform: scale(0.95) !important;
+}
+
+/* Gradient Header */
+div[style*="linear-gradient(135deg"] {
+  position: relative;
+  overflow: hidden;
+}
+
+div[style*="linear-gradient(135deg"]::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  animation: slideDown 0.5s ease-in-out;
+}
+
+/* Table Headers Styling */
+table thead th {
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  font-size: 12px !important;
+  letter-spacing: 0.5px !important;
+}
+
+/* Badges Styling */
+[style*="padding: 6px 12px"][style*="borderRadius"] {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+[style*="padding: 6px 12px"][style*="borderRadius"]:hover {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Loading Spinner Animation */
+div[style*="animation: spin"] {
+  animation: spin 1s linear infinite !important;
+}
+
+/* Smooth Transitions */
+* {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+button, [role="button"] {
+  transition: all 0.2s ease !important;
+}
+
+/* Input and Form Elements */
+input, textarea, select {
+  border: 1px solid #e8eaed !important;
+  border-radius: 8px !important;
+  padding: 8px 12px !important;
+  font-size: 14px !important;
+  transition: all 0.2s ease !important;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #4285f4 !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.1) !important;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f3f4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9aa0a6;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #80868b;
+}
+
+/* Card Shadows and Effects */
+div[style*="boxShadow: 0 2px 8px"] {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+div[style*="boxShadow: 0 2px 8px"]:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  div[style*="gridTemplateColumns"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  button[style*="padding"] {
+    padding: 8px 12px !important;
+  }
+
+  div[style*="padding: 2rem"] {
+    padding: 1rem !important;
+  }
+}
